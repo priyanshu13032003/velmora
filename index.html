@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Verified SEMrush SEO Title and Meta Description -->
+  <title>Velmora — Oversized T-Shirts, Hoodies & Aesthetic Accessories India</title>
+  <meta name="description" content="Discover Velmora's premium oversized t-shirts, streetwear hoodies, canvas tote bags, aesthetic phone cases, and daily planners with custom print-on-demand designs.">
+  <meta name="keywords" content="oversized white t shirt, graphic t shirts india, oversized hoodie men, canvas tote bag, aesthetic phone cases, daily planner diary, streetwear hoodies">
+  <meta name="author" content="Velmora">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Velmora — Oversized T-Shirts, Hoodies & Aesthetic Accessories India">
+  <meta property="og:description" content="Original graphic apparel and accessories designed for the modern storyteller. Shop our 24 verified streetwear products or create your own custom design.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/290a69_260e0b6dfbca4970ae4a618ae26061e0~mv2.png">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#faf8f5',
+              100: '#f4efe6',
+              200: '#e8ded0',
+              800: '#27272a',
+              900: '#18181b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/velmora_v_icon.png">
+</head>
+<body class="bg-[#faf8f5] text-neutral-900 min-h-screen flex flex-col">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-neutral-900 text-neutral-100 py-2 px-4 text-xs font-medium text-center tracking-wide flex items-center justify-center gap-2">
+    <span>✨ FREE EXPRESS SHIPPING OVER ₹999</span>
+    <span class="text-neutral-500">•</span>
+    <span>USE CODE <strong class="text-amber-400">VELMORA10</strong> FOR 10% OFF</span>
+    <span class="text-neutral-500">•</span>
+    <span>CUSTOMIZE ANY PRODUCT IN 1-CLICK</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-neutral-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Left: Mobile Menu Trigger & Main Links -->
+      <div class="flex items-center gap-6">
+        <button id="mobileMenuToggleBtn" type="button" class="lg:hidden p-2 rounded-lg text-neutral-700 hover:bg-neutral-100" aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center group">
+          <img src="assets/velmora_logo.png" alt="VELMORA" class="h-6 sm:h-7 md:h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-neutral-700">
+          <a href="#" class="hover:text-neutral-950 transition">Home</a>
+          <a href="#shop" class="hover:text-neutral-950 transition">Shop All (24)</a>
+          <a href="#customizer" class="text-indigo-600 hover:text-indigo-700 transition flex items-center gap-1.5 font-bold">
+            <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+            Create Your Own
+          </a>
+          <a href="#about" class="hover:text-neutral-950 transition">About Us</a>
+        </nav>
+      </div>
+
+      <!-- Right: Search, Profile Icon & Cart -->
+      <div class="flex items-center gap-3 md:gap-4">
+        
+        <!-- Desktop Search Bar -->
+        <div class="hidden md:flex items-center relative w-64 lg:w-72">
+          <input id="headerSearchInput" type="text" placeholder="Search 24 products or keywords..." 
+            class="w-full bg-neutral-100/90 text-xs rounded-full pl-9 pr-4 py-2 border border-transparent focus:border-neutral-400 focus:bg-white focus:outline-none transition">
+          <svg class="w-4 h-4 text-neutral-400 absolute left-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <!-- User Profile Dropdown / Auth Trigger -->
+        <div class="relative">
+          <button id="headerProfileBtn" type="button" class="flex items-center gap-2 p-1.5 rounded-full hover:bg-neutral-100 transition border border-neutral-200/60" title="Account">
+            <div id="headerUserAvatar" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center overflow-hidden">
+              <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+            </div>
+            <span id="headerUserName" class="hidden md:inline text-xs font-bold text-neutral-800 pr-2">Log In</span>
+          </button>
+
+          <!-- Profile Dropdown Menu -->
+          <div id="profileDropdownMenu" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-neutral-200 py-3 z-50 animate-fade-in">
+            <div class="px-4 py-2 border-b border-neutral-100 flex items-center gap-3">
+              <div id="dropdownUserAvatar" class="w-10 h-10 rounded-full bg-neutral-100 overflow-hidden flex-shrink-0"></div>
+              <div class="min-w-0">
+                <p id="dropdownUserName" class="font-bold text-sm text-neutral-900 truncate">Velmora Member</p>
+                <p id="dropdownUserEmail" class="text-xs text-neutral-500 truncate">member@velmora.in</p>
+              </div>
+            </div>
+            <div class="py-1">
+              <a href="#customizer" class="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-50">
+                <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                Design Custom Apparel
+              </a>
+              <button id="dropdownOrdersBtn" type="button" class="w-full text-left flex items-center gap-2 px-4 py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-50">
+                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                My Orders & Tracking
+              </button>
+            </div>
+            <div class="pt-2 border-t border-neutral-100 px-4">
+              <button id="dropdownLogoutBtn" type="button" class="w-full py-1.5 text-center rounded-lg bg-neutral-100 hover:bg-rose-50 text-rose-600 font-bold text-xs transition">
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Button with Live Counter Badge -->
+        <button id="headerCartBtn" type="button" class="relative p-2.5 rounded-full bg-neutral-900 text-white hover:bg-neutral-800 transition shadow-md flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-amber-500 text-neutral-950 font-extrabold text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow">
+            0
+          </span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Search Row -->
+    <div class="md:hidden px-4 pb-3">
+      <input id="mobileSearchInput" type="text" placeholder="Search 24 products..." 
+        class="w-full bg-neutral-100 text-xs rounded-full px-4 py-2 border border-neutral-200 focus:outline-none">
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenuDrawer" class="hidden lg:hidden bg-white border-b border-neutral-200 px-6 py-4 space-y-3 animate-fade-in">
+      <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Navigation</span>
+        <button id="closeMobileMenuBtn" class="text-neutral-400 hover:text-neutral-800 text-lg">&times;</button>
+      </div>
+      <a href="#" class="block text-sm font-bold text-neutral-900 py-1">Home</a>
+      <a href="#shop" class="block text-sm font-semibold text-neutral-700 py-1">Shop All Products (24)</a>
+      <a href="#customizer" class="block text-sm font-bold text-indigo-600 py-1">✨ Create Your Own Design</a>
+      <a href="#about" class="block text-sm font-semibold text-neutral-700 py-1">About Us</a>
+    </div>
+  </header>
+
+  <!-- Main Hero Section - Replicating Wix Store with Subtle Left Gradient -->
+  <section class="hero-banner-container flex items-center">
+    <!-- Left Gradient Overlay for Clear Text Readability as Requested -->
+    <div class="hero-left-gradient-overlay"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+      <div class="max-w-xl lg:max-w-2xl">
+        <span class="inline-block px-3.5 py-1 text-xs font-extrabold tracking-widest uppercase rounded-full bg-neutral-900 text-white mb-4 shadow-sm">
+          Print-On-Demand Atelier
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-neutral-950 tracking-tight leading-[1.1] mb-6">
+          Your Style, <br><span class="italic font-serif">Your Story</span>
+        </h1>
+        <p class="text-base sm:text-lg text-neutral-700 leading-relaxed font-medium mb-8 max-w-lg">
+          Original graphic apparel and accessories designed for the modern storyteller. We bring your unique perspective to life through premium print-on-demand fashion.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#shop" class="px-8 py-4 rounded-full bg-neutral-950 text-white font-bold text-sm hover:bg-neutral-800 transition transform hover:-translate-y-0.5 shadow-xl flex items-center gap-2">
+            <span>Shop Now</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="#customizer" class="px-7 py-4 rounded-full bg-white text-neutral-900 border border-neutral-300 font-bold text-sm hover:bg-neutral-50 transition transform hover:-translate-y-0.5 shadow-md flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            <span>Create Your Own Design</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Propositions Banner -->
+  <section class="border-y border-neutral-200/80 bg-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="flex flex-col items-center">
+        <span class="text-2xl mb-1">🧵</span>
+        <h4 class="font-bold text-xs text-neutral-900">Heavyweight 240+ GSM</h4>
+        <p class="text-[11px] text-neutral-500">Premium combed cotton fabrics</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-2xl mb-1">🎨</span>
+        <h4 class="font-bold text-xs text-neutral-900">Custom Studio & Multilingual</h4>
+        <p class="text-[11px] text-neutral-500">Add text in any language & photo</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-2xl mb-1">⚡</span>
+        <h4 class="font-bold text-xs text-neutral-900">Zero-Overflow Fit Guarantee</h4>
+        <p class="text-[11px] text-neutral-500">Precision boundary clipping mask</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-2xl mb-1">🛡️</span>
+        <h4 class="font-bold text-xs text-neutral-900">Instant Payment Approval</h4>
+        <p class="text-[11px] text-neutral-500">Cards, UPI QR, NetBanking & COD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: "CREATE YOUR OWN DESIGN" INTERACTIVE STUDIO -->
+  <section id="customizer" class="py-16 bg-[#f4efe6]/50 border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-extrabold uppercase tracking-wider">
+          Interactive Custom Atelier
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 mt-3 mb-4">
+          Create Your Own Design
+        </h2>
+        <p class="text-neutral-600 text-sm leading-relaxed">
+          Customize t-shirts, hoodies, jackets, bags, and phone cases. Add your own multilingual typography in any font & color, upload custom images, and adjust positioning with our <strong>guaranteed zero-overflow clipping boundary</strong>.
+        </p>
+      </div>
+
+      <!-- Studio Layout: Left Preview, Right Controls -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Garment Mockup Canvas with Strict Boundary Mask -->
+        <div class="lg:col-span-6 sticky top-28">
+          <div class="bg-white rounded-3xl p-6 border border-neutral-200/90 shadow-xl">
+            
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-neutral-100">
+              <div>
+                <span class="text-xs font-bold text-neutral-400 uppercase">Live 3D Apparel Preview</span>
+                <h3 id="customizerGarmentTitle" class="text-base font-bold text-neutral-900">Oversized Streetwear T-Shirt</h3>
+              </div>
+              <div class="flex items-center gap-3">
+                <label class="flex items-center gap-1.5 text-xs text-neutral-500 cursor-pointer select-none">
+                  <input type="checkbox" id="togglePrintGuides" checked class="rounded text-neutral-900 focus:ring-0">
+                  <span>Print Guides</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Visual Mockup Container -->
+            <div class="mockup-wrapper relative" id="mockupWrapper">
+              <!-- Background Garment Layer -->
+              <div id="mockupGarmentContainer" class="mockup-garment-layer"></div>
+              
+              <!-- Silhouette Overlay Layer -->
+              <div id="mockupSilhouetteLayer" class="absolute inset-0 pointer-events-none z-0"></div>
+
+              <!-- STRICT PRINTABLE BOUNDING AREA (overflow:hidden) -->
+              <!-- Ensures image & text NEVER escape garment boundary -->
+              <div id="printableBoundingArea" class="printable-bounding-area show-guide">
+                <!-- Rendered Custom Image -->
+                <img id="renderedCustomImage" class="rendered-custom-image hidden" alt="Custom artwork preview">
+                <!-- Rendered Custom Text -->
+                <div id="renderedCustomText" class="rendered-custom-text">VELMORA</div>
+              </div>
+            </div>
+
+            <!-- Under-Preview Summary -->
+            <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-neutral-400 block">Total Customized Price</span>
+                <span id="customizerPriceDisplay" class="text-2xl font-extrabold text-neutral-900">₹899</span>
+              </div>
+              <button id="customizerAddToCartBtn" type="button" 
+                class="px-8 py-3.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-sm transition transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                <span>Add Custom Design to Cart</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Studio Controls -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Card 1: Category & Garment Selection -->
+          <div class="bg-white rounded-2xl p-6 border border-neutral-200/80 shadow-sm">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3 flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-neutral-900 text-white text-[10px] flex items-center justify-center font-extrabold">1</span>
+              Choose Item to Customize
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 mb-1">Product Type</label>
+                <select id="customizerGarmentSelect" class="w-full text-xs font-semibold p-2.5 rounded-xl border border-neutral-200 bg-neutral-50 focus:bg-white focus:outline-none"></select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 mb-1">Size</label>
+                <div id="garmentSizeOptions" class="flex flex-wrap gap-1.5"></div>
+              </div>
+            </div>
+
+            <!-- Color Palette -->
+            <div class="mt-4 pt-3 border-t border-neutral-100">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-semibold text-neutral-700">Garment Base Color</label>
+                <span id="activeColorName" class="text-xs text-neutral-500 font-medium">Vintage Cream</span>
+              </div>
+              <div id="garmentColorSwatches" class="flex flex-wrap gap-2.5"></div>
+            </div>
+          </div>
+
+          <!-- Card 2: Multilingual Custom Typography Engine -->
+          <div class="bg-white rounded-2xl p-6 border border-neutral-200/80 shadow-sm">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3 flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-neutral-900 text-white text-[10px] flex items-center justify-center font-extrabold">2</span>
+              Write Custom Text (Any Language, Font & Color)
+            </h4>
+
+            <div class="space-y-3">
+              <div>
+                <label class="block text-xs font-semibold text-neutral-700 mb-1">Custom Text (English, Hindi, Japanese, Arabic, etc.)</label>
+                <input id="customTextInput" type="text" placeholder="e.g. VELMORA, नमस्ते, 東京, AMOUR" 
+                  class="w-full text-sm font-medium p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-[11px] font-semibold text-neutral-600 mb-1">Font Style</label>
+                  <select id="customFontSelect" class="w-full text-xs p-2 rounded-lg border border-neutral-200 bg-neutral-50 focus:outline-none">
+                    <option value="'Space Grotesk', sans-serif">Modern Grotesk</option>
+                    <option value="'Cinzel', serif">Luxury Serif</option>
+                    <option value="'Playfair Display', serif">Editorial Italic</option>
+                    <option value="'Permanent Marker', cursive">Street Graffiti</option>
+                    <option value="'Syne', sans-serif">Brutalist Bold</option>
+                    <option value="'Plus Jakarta Sans', sans-serif">Clean Minimal</option>
+                  </select>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-[11px] font-semibold text-neutral-600 mb-1">
+                    <span>Size</span>
+                    <span id="fontSizeDisplay">26px</span>
+                  </div>
+                  <input id="customFontSizeSlider" type="range" min="12" max="60" value="26" class="w-full accent-neutral-900">
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-[11px] font-semibold text-neutral-600 mb-1">
+                    <span>Color</span>
+                    <button type="button" id="textBoldBtn" class="px-1.5 py-0.5 rounded text-[10px] border border-neutral-300 font-bold bg-neutral-900 text-white">B</button>
+                  </div>
+                  <input id="customTextColorInput" type="color" value="#18181b" class="w-full h-8 p-0.5 rounded-lg border border-neutral-200 cursor-pointer">
+                </div>
+              </div>
+
+              <!-- Text Nudge & Rotation -->
+              <div class="pt-2 border-t border-neutral-100 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-[11px] font-semibold text-neutral-500">Nudge Text:</span>
+                  <div class="flex items-center gap-1">
+                    <button type="button" class="nudge-btn" data-text-nudge="up" title="Up">↑</button>
+                    <button type="button" class="nudge-btn" data-text-nudge="down" title="Down">↓</button>
+                    <button type="button" class="nudge-btn" data-text-nudge="left" title="Left">←</button>
+                    <button type="button" class="nudge-btn" data-text-nudge="right" title="Right">→</button>
+                    <button type="button" class="nudge-btn text-xs font-normal" data-text-nudge="center" title="Center">⌖</button>
+                  </div>
+                </div>
+
+                <div class="w-36">
+                  <div class="flex items-center justify-between text-[11px] font-semibold text-neutral-500">
+                    <span>Rotate</span>
+                    <span id="textRotateDisplay">0°</span>
+                  </div>
+                  <input id="customTextRotateSlider" type="range" min="-180" max="180" value="0" class="w-full accent-neutral-900">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 3: Custom Image Upload & Strict Fit Controls -->
+          <div class="bg-white rounded-2xl p-6 border border-neutral-200/80 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-400 flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-neutral-900 text-white text-[10px] flex items-center justify-center font-extrabold">3</span>
+                Upload Image & Adjust Fit
+              </h4>
+              <button id="removeCustomImageBtn" type="button" class="hidden text-xs text-rose-600 font-bold hover:underline">
+                Remove Image
+              </button>
+            </div>
+
+            <!-- Upload Input -->
+            <div class="border-2 border-dashed border-neutral-200 hover:border-neutral-400 transition rounded-xl p-4 text-center cursor-pointer mb-4 bg-neutral-50">
+              <input id="customImageUploadInput" type="file" accept="image/*" class="hidden">
+              <label for="customImageUploadInput" class="cursor-pointer block">
+                <svg class="w-7 h-7 mx-auto text-neutral-400 mb-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-xs font-bold text-neutral-800 block">Click to upload your image</span>
+                <span class="text-[11px] text-neutral-400">PNG, JPG, SVG or WebP. Auto-clipped to garment</span>
+              </label>
+            </div>
+
+            <!-- Curated Streetwear Stickers -->
+            <div class="mb-4">
+              <span class="text-[11px] font-semibold text-neutral-500 block mb-2">Or choose from curated graphic art:</span>
+              <div id="presetStickersList" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <!-- Adjustment Directional & Zoom Sliders -->
+            <div class="pt-3 border-t border-neutral-100 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-neutral-800">Precision Image Adjustments:</span>
+                <span class="text-[11px] text-emerald-600 font-semibold">✓ Boundary Mask Active</span>
+              </div>
+
+              <!-- Directional Nudge Pad (Left, Right, Top/Up, Down, Center) -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-[11px] font-semibold text-neutral-500">Nudge Image:</span>
+                  <div class="flex items-center gap-1">
+                    <button type="button" class="nudge-btn" data-img-nudge="up" title="Move Up">↑</button>
+                    <button type="button" class="nudge-btn" data-img-nudge="down" title="Move Down">↓</button>
+                    <button type="button" class="nudge-btn" data-img-nudge="left" title="Move Left">←</button>
+                    <button type="button" class="nudge-btn" data-img-nudge="right" title="Move Right">→</button>
+                    <button type="button" class="nudge-btn text-xs font-normal" data-img-nudge="center" title="Center Image">⌖</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <!-- Scale / Zoom Slider -->
+                <div>
+                  <div class="flex items-center justify-between text-[11px] font-semibold text-neutral-600 mb-1">
+                    <span>Image Scale (Zoom)</span>
+                    <span id="imageScaleDisplay">80%</span>
+                  </div>
+                  <input id="customImageScaleSlider" type="range" min="15" max="180" value="80" class="w-full accent-neutral-900">
+                  <span class="text-[10px] text-neutral-400 block mt-0.5">Enlarging never overflows garment</span>
+                </div>
+
+                <!-- Rotation Slider -->
+                <div>
+                  <div class="flex items-center justify-between text-[11px] font-semibold text-neutral-600 mb-1">
+                    <span>Rotate Image</span>
+                    <span id="imageRotateDisplay">0°</span>
+                  </div>
+                  <input id="customImageRotateSlider" type="range" min="-180" max="180" value="0" class="w-full accent-neutral-900">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: SHOP ALL 24 VERIFIED PRODUCTS -->
+  <section id="shop" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Catalogue (24 Products)</span>
+        <h2 class="text-3xl font-extrabold text-neutral-900 mt-1">
+          Explore the Velmora Collection
+        </h2>
+        <p class="text-xs text-neutral-500 mt-1" id="productsCountDisplay">
+          Showing 24 products
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div id="categoryFilterTabs" class="flex items-center gap-1.5 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+        <button type="button" class="category-filter-btn active-category-filter" data-category="all">All (24)</button>
+        <button type="button" class="category-filter-btn" data-category="t-shirts">T-Shirts</button>
+        <button type="button" class="category-filter-btn" data-category="hoodies">Hoodies & Sweats</button>
+        <button type="button" class="category-filter-btn" data-category="bags">Bags & Totes</button>
+        <button type="button" class="category-filter-btn" data-category="accessories">Phone Cases</button>
+        <button type="button" class="category-filter-btn" data-category="stationery">Stationery & Planners</button>
+      </div>
+    </div>
+
+    <!-- 24 Products Grid -->
+    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+
+  </section>
+
+  <!-- SECTION: ABOUT VELMORA -->
+  <section id="about" class="py-24 bg-[#f8f6f0] border-t border-neutral-200/90">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+      
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-neutral-950 tracking-tight font-serif mb-10">
+        About VELMORA
+      </h2>
+
+      <div class="space-y-6 text-neutral-700 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto font-normal">
+        <p>
+          VELMORA Your Style, Your Story is a modern print-on-demand apparel and lifestyle brand created for people who love to express their personality through what they wear and use.
+        </p>
+        <p>
+          At VELMORA, we believe fashion is more than just clothing. It is a way to express yourself, showcase your individuality, and tell your story. Our goal is to create unique, creative, and meaningful designs that connect with different personalities, moods, interests, and lifestyles.
+        </p>
+        <p>
+          Our collection includes graphic T-shirts, oversized T-shirts, hoodies, sweatshirts, tote bags, phone cases, journals, and other lifestyle products. Each design is created with attention to creativity, simplicity, and modern trends, making our products suitable for everyday wear and personal expression.
+        </p>
+        <p>
+          VELMORA follows a print-on-demand business model, which means products are created when customers place an order. This allows us to introduce new designs and collections without maintaining large amounts of inventory. It also gives us the flexibility to continuously experiment with fresh ideas and bring unique designs to our customers.
+        </p>
+        <p>
+          We are passionate about creating products that feel personal and different from mass-produced fashion. Whether you want to make a statement, showcase your interests, express your mood, or simply find something that matches your style, VELMORA aims to offer something for you.
+        </p>
+        <p>
+          Our mission is to build a creative fashion and lifestyle brand that combines design, individuality, and quality. We want every product to be more than just an item, it should represent a feeling, an idea, or a part of your personality.
+        </p>
+        <p>
+          As we grow, we aim to build a community of people who appreciate creativity and aren't afraid to express themselves. Through new collections, original graphics, and customer-inspired ideas, we continue to evolve and bring fresh products to the market.
+        </p>
+        <p class="font-medium text-neutral-900 pt-2">
+          At VELMORA, your style is your identity, and your story deserves to be seen.
+        </p>
+        <p class="font-bold text-neutral-950 text-base sm:text-lg tracking-wide uppercase pt-1 font-serif">
+          VELMORA Your Style. Your Story.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-neutral-200/80 mt-auto pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-4">
+          <img src="assets/velmora_logo.png" alt="VELMORA" class="h-6 w-auto object-contain">
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            Velmora is a premium print-on-demand fashion brand bringing your unique perspective to life through original graphic apparel, totes, phone cases, and planners.
+          </p>
+          <div class="text-xs text-neutral-400">
+            Registered: Noida / Uttar Pradesh, India
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-3">Shop Categories</h4>
+          <ul class="space-y-2 text-xs text-neutral-600">
+            <li><a href="#shop" class="hover:text-neutral-900">Oversized White T-Shirts</a></li>
+            <li><a href="#shop" class="hover:text-neutral-900">Graphic T-Shirts India</a></li>
+            <li><a href="#shop" class="hover:text-neutral-900">Streetwear Hoodies & Sweats</a></li>
+            <li><a href="#shop" class="hover:text-neutral-900">Canvas Office Tote Bags</a></li>
+            <li><a href="#shop" class="hover:text-neutral-900">Aesthetic Phone Cases</a></li>
+            <li><a href="#shop" class="hover:text-neutral-900">Daily Planner Diaries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-3">Customer Support</h4>
+          <ul class="space-y-2 text-xs text-neutral-600">
+            <li><a href="#about" class="hover:text-neutral-900">About VELMORA</a></li>
+            <li><a href="#customizer" class="hover:text-neutral-900">Create Custom Design</a></li>
+            <li><a href="javascript:void(0)" onclick="AuthManager.showOrdersModal()" class="hover:text-neutral-900">Track Your Order</a></li>
+            <li><a href="javascript:void(0)" onclick="AuthManager.openAuthModal()" class="hover:text-neutral-900">Member Sign In</a></li>
+            <li><a href="javascript:void(0)" onclick="CartManager.openDrawer()" class="hover:text-neutral-900">View Cart</a></li>
+            <li><span class="text-neutral-400">Shipping: 2–5 Business Days</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-3">Stay Connected</h4>
+          <p class="text-xs text-neutral-500 mb-3">Get 10% off your first custom drop with VIP launch access.</p>
+          <div class="flex items-center">
+            <input type="email" placeholder="Enter your email" class="w-full text-xs p-2.5 rounded-l-xl border border-neutral-200 focus:outline-none">
+            <button type="button" class="bg-neutral-900 text-white text-xs font-bold px-4 py-2.5 rounded-r-xl hover:bg-neutral-800" onclick="showToast('Subscribed to Velmora VIP!')">Join</button>
+          </div>
+          <div class="mt-4 flex items-center gap-3 text-xs text-neutral-400">
+            <span>🔒 256-Bit SSL Secure Checkout</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-neutral-100 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-3">
+        <p>© 2026 Velmora. All rights reserved. Built with pride for modern storytellers.</p>
+        <div class="flex items-center gap-4">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Refund Policy</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS & DRAWERS ==================== -->
+
+  <!-- 1. CART SLIDE-OVER DRAWER -->
+  <div id="cartDrawerBackdrop" class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-xs"></div>
+  <aside id="cartSlideOverDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    
+    <div class="p-5 border-b border-neutral-200 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <h3 class="font-extrabold text-base text-neutral-900">Shopping Cart</h3>
+        <span class="cart-count-badge text-xs px-2 py-0.5 rounded-full bg-neutral-100 font-bold">0</span>
+      </div>
+      <button id="closeCartDrawerBtn" class="text-neutral-400 hover:text-neutral-800 text-2xl p-1">&times;</button>
+    </div>
+
+    <!-- Items List -->
+    <div class="flex-1 overflow-y-auto p-5">
+      <div id="cartEmptyState" class="text-center py-16">
+        <svg class="w-12 h-12 mx-auto text-neutral-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        </svg>
+        <p class="font-bold text-neutral-700 text-sm">Your cart is empty</p>
+        <p class="text-xs text-neutral-400 mt-1">Looks like you haven't added anything yet.</p>
+        <a href="#shop" onclick="CartManager.closeDrawer()" class="inline-block mt-4 px-5 py-2 rounded-full bg-neutral-900 text-white text-xs font-bold">
+          Start Shopping
+        </a>
+      </div>
+      <div id="cartItemsList"></div>
+    </div>
+
+    <!-- Promo Code Box -->
+    <div class="px-5 py-3 border-t border-neutral-100 bg-neutral-50/70">
+      <div class="flex items-center gap-2">
+        <input id="cartPromoInput" type="text" placeholder="Promo code (e.g. VELMORA10)" class="flex-1 text-xs p-2 rounded-lg border border-neutral-200 uppercase font-semibold">
+        <button id="applyPromoBtn" type="button" class="px-3 py-2 bg-neutral-900 text-white text-xs font-bold rounded-lg hover:bg-neutral-800">Apply</button>
+      </div>
+      <div id="promoCodeMessage" class="text-[11px] mt-1.5"></div>
+    </div>
+
+    <!-- Totals & Checkout Trigger -->
+    <div class="p-5 border-t border-neutral-200 space-y-2 bg-white">
+      <div class="flex justify-between text-xs text-neutral-600">
+        <span>Subtotal</span>
+        <span id="cartSubtotalDisplay" class="font-bold text-neutral-900">₹0</span>
+      </div>
+      <div id="cartDiscountRow" class="hidden flex justify-between text-xs text-emerald-600 font-semibold">
+        <span>Coupon Discount</span>
+        <span id="cartDiscountDisplay">-₹0</span>
+      </div>
+      <div class="flex justify-between text-xs text-neutral-600">
+        <span>Estimated Delivery</span>
+        <span id="cartShippingDisplay" class="font-bold text-neutral-900">FREE</span>
+      </div>
+      <div class="pt-2 border-t border-neutral-100 flex justify-between text-base font-extrabold text-neutral-900">
+        <span>Total</span>
+        <span id="cartTotalDisplay">₹0</span>
+      </div>
+      <button id="proceedToCheckoutBtn" type="button" class="w-full mt-3 py-3.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-sm shadow-xl transition flex items-center justify-center gap-2">
+        <span>Proceed to Checkout</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 2. AUTHENTICATION MODAL (Email/Pass + Google Sign-In) -->
+  <div id="authModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl border border-neutral-200 relative">
+      <button id="closeAuthModalBtn" class="absolute top-5 right-5 text-neutral-400 hover:text-neutral-700 text-2xl">&times;</button>
+      
+      <div class="text-center mb-6">
+        <img src="assets/velmora_logo.png" alt="VELMORA" class="h-7 mx-auto mb-3 object-contain">
+        <h3 class="text-xl font-extrabold text-neutral-900">Welcome to VELMORA</h3>
+        <p class="text-xs text-neutral-500">Sign in to save custom designs and track your orders</p>
+      </div>
+
+      <!-- Google Sign-In Button (Official Branded) -->
+      <button type="button" class="google-signin-btn mb-4">
+        <svg class="w-4 h-4" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <div class="flex items-center gap-3 my-4">
+        <div class="h-px bg-neutral-200 flex-1"></div>
+        <span class="text-[11px] text-neutral-400 uppercase font-semibold">or with email</span>
+        <div class="h-px bg-neutral-200 flex-1"></div>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="flex border-b border-neutral-200 mb-4">
+        <button id="authTabLogin" class="auth-tab-btn active-auth-tab flex-1 text-center">Log In</button>
+        <button id="authTabSignup" class="auth-tab-btn flex-1 text-center">Create Account</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginFormContainer">
+        <form id="emailLoginForm" class="space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Email ID</label>
+            <input id="loginEmail" type="email" required placeholder="you@example.com" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Password</label>
+            <input id="loginPassword" type="password" required placeholder="••••••••" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <div class="flex items-center justify-between text-xs pt-1">
+            <label class="flex items-center gap-1.5 text-neutral-500">
+              <input type="checkbox" checked class="rounded text-neutral-900">
+              <span>Remember me</span>
+            </label>
+            <a href="javascript:void(0)" class="text-neutral-500 hover:text-neutral-900">Forgot?</a>
+          </div>
+          <button type="submit" class="w-full mt-2 py-3 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold rounded-xl transition">
+            Sign In to Account
+          </button>
+        </form>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signupFormContainer" class="hidden">
+        <form id="emailSignupForm" class="space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Full Name</label>
+            <input id="signupName" type="text" required placeholder="Priyanshu Sharma" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Email ID</label>
+            <input id="signupEmail" type="email" required placeholder="you@example.com" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Create Password</label>
+            <input id="signupPassword" type="password" required placeholder="At least 8 characters" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <button type="submit" class="w-full mt-2 py-3 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold rounded-xl transition">
+            Create Velmora Account
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. PRODUCT QUICK VIEW MODAL -->
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-6 md:p-8 shadow-2xl border border-neutral-200 relative overflow-y-auto max-h-[90vh]">
+      <button id="closeQuickViewBtn" class="absolute top-5 right-5 text-neutral-400 hover:text-neutral-700 text-2xl">&times;</button>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="aspect-square rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
+          <img id="qvProductImage" src="" alt="" class="w-full h-full object-cover">
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <span id="qvProductCategory" class="text-xs font-bold text-neutral-400 uppercase tracking-wider"></span>
+            <h2 id="qvProductName" class="text-2xl font-extrabold text-neutral-900 mt-1"></h2>
+            <div id="qvProductRating" class="text-xs text-amber-500 font-semibold mt-1"></div>
+          </div>
+
+          <div class="flex items-baseline gap-2">
+            <span id="qvProductPrice" class="text-2xl font-extrabold text-neutral-900"></span>
+            <span id="qvProductOriginalPrice" class="text-sm text-neutral-400 line-through"></span>
+          </div>
+
+          <p id="qvProductDescription" class="text-xs text-neutral-600 leading-relaxed"></p>
+
+          <!-- Verified SEO keywords for this item -->
+          <div id="qvProductKeywords" class="flex flex-wrap gap-1"></div>
+
+          <!-- Color & Size -->
+          <div class="space-y-2 pt-2 border-t border-neutral-100">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">Color Variant</label>
+              <div id="qvColorOptions" class="flex gap-2"></div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">Size Selection</label>
+              <div id="qvSizeOptions" class="flex flex-wrap gap-1.5"></div>
+            </div>
+          </div>
+
+          <!-- Quantity and Add Button -->
+          <div class="pt-3 border-t border-neutral-100 flex items-center gap-3">
+            <div class="flex items-center border border-neutral-200 rounded-xl overflow-hidden">
+              <button id="qvQtyDec" class="px-3 py-2 text-neutral-600 hover:bg-neutral-100">-</button>
+              <span id="qvQtyDisplay" class="px-3 text-xs font-bold">1</span>
+              <button id="qvQtyInc" class="px-3 py-2 text-neutral-600 hover:bg-neutral-100">+</button>
+            </div>
+            <button id="qvAddToCartBtn" type="button" class="flex-1 py-3 bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+              <span>Add to Shopping Cart</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. CHECKOUT MODAL & PAYMENT GATEWAY FACE -->
+  <div id="checkoutModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 md:p-8 shadow-2xl border border-neutral-200 relative my-6">
+      <button id="closeCheckoutModalBtn" class="absolute top-5 right-5 text-neutral-400 hover:text-neutral-700 text-2xl">&times;</button>
+      
+      <!-- Multi-step Indicator -->
+      <div class="flex items-center justify-between pb-4 border-b border-neutral-100 mb-6">
+        <div class="step-indicator-pill active-step" data-step="1">
+          <span class="step-circle">1</span>
+          <span>Delivery</span>
+        </div>
+        <div class="h-0.5 w-12 bg-neutral-200"></div>
+        <div class="step-indicator-pill" data-step="2">
+          <span class="step-circle">2</span>
+          <span>Payment Face</span>
+        </div>
+        <div class="h-0.5 w-12 bg-neutral-200"></div>
+        <div class="step-indicator-pill" data-step="3">
+          <span class="step-circle">3</span>
+          <span>Order Confirmation</span>
+        </div>
+      </div>
+
+      <!-- STEP 1: SHIPPING ADDRESS -->
+      <div id="checkoutStep1" class="checkout-step-content space-y-4">
+        <h3 class="text-base font-extrabold text-neutral-900">Shipping & Delivery Details</h3>
+        <form id="shippingAddressForm" class="space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">Full Name</label>
+              <input id="shipName" type="text" required value="Priyanshu Sharma" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">Phone Number</label>
+              <input id="shipPhone" type="tel" required value="+91 98765 43210" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Email Address</label>
+            <input id="shipEmail" type="email" required value="priyanshusharma740@gmail.com" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-700 mb-1">Street Address / House / Flat No.</label>
+            <input id="shipAddress" type="text" required value="Velma Tower, Sector 62" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">City</label>
+              <input id="shipCity" type="text" required value="Noida" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">State</label>
+              <input id="shipState" type="text" required value="Uttar Pradesh" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">PIN Code</label>
+              <input id="shipPincode" type="text" required value="201309" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 focus:outline-none focus:border-neutral-900">
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-100 flex justify-end">
+            <button type="submit" class="px-8 py-3 bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs rounded-xl shadow-lg transition">
+              Proceed to Payment →
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- STEP 2: PAYMENT GATEWAY FACE -->
+      <div id="checkoutStep2" class="checkout-step-content hidden space-y-5">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base font-extrabold text-neutral-900">Payment Face & Verification</h3>
+          <button id="backToAddressBtn" type="button" class="text-xs text-neutral-500 hover:underline">← Back to Address</button>
+        </div>
+
+        <!-- Payment Method Options -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <button type="button" class="payment-method-option selected-payment" data-method="card">
+            <span class="text-lg">💳</span>
+            <span class="text-xs font-bold text-neutral-900">Card</span>
+          </button>
+          <button type="button" class="payment-method-option" data-method="upi">
+            <span class="text-lg">📱</span>
+            <span class="text-xs font-bold text-neutral-900">UPI / QR</span>
+          </button>
+          <button type="button" class="payment-method-option" data-method="netbanking">
+            <span class="text-lg">🏛️</span>
+            <span class="text-xs font-bold text-neutral-900">Net Banking</span>
+          </button>
+          <button type="button" class="payment-method-option" data-method="cod">
+            <span class="text-lg">💵</span>
+            <span class="text-xs font-bold text-neutral-900">COD</span>
+          </button>
+        </div>
+
+        <!-- Subform: Credit/Debit Card -->
+        <div id="paymentSubform-card" class="payment-subform p-4 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-neutral-700">Card Details (Visa, Mastercard, RuPay)</span>
+            <div class="flex gap-1.5 text-xs font-bold text-neutral-400">
+              <span>VISA</span>
+              <span>MC</span>
+              <span>RuPay</span>
+            </div>
+          </div>
+          <div>
+            <label class="block text-[11px] font-semibold text-neutral-500 mb-1">Card Number</label>
+            <input type="text" placeholder="4532 •••• •••• 8921" value="4532 8901 2345 8921" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 bg-white font-mono">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-[11px] font-semibold text-neutral-500 mb-1">Valid Thru</label>
+              <input type="text" placeholder="MM/YY" value="09/28" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 bg-white font-mono">
+            </div>
+            <div>
+              <label class="block text-[11px] font-semibold text-neutral-500 mb-1">CVV / CVC</label>
+              <input type="password" placeholder="•••" value="740" class="w-full text-xs p-2.5 rounded-xl border border-neutral-200 bg-white font-mono">
+            </div>
+          </div>
+        </div>
+
+        <!-- Subform: UPI / QR Code -->
+        <div id="paymentSubform-upi" class="payment-subform hidden p-4 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-3">
+          <div class="text-center py-2">
+            <p class="text-xs font-bold text-neutral-900 mb-1">Scan QR code using GPay, PhonePe, or Paytm</p>
+            <!-- Simulated QR Code SVG -->
+            <div class="w-36 h-36 mx-auto bg-white p-2 rounded-xl border border-neutral-200 shadow-sm flex items-center justify-center">
+              <svg class="w-full h-full" viewBox="0 0 100 100" fill="#18181b">
+                <rect x="5" y="5" width="25" height="25" fill="none" stroke="#18181b" stroke-width="4"/>
+                <rect x="11" y="11" width="13" height="13"/>
+                <rect x="70" y="5" width="25" height="25" fill="none" stroke="#18181b" stroke-width="4"/>
+                <rect x="76" y="11" width="13" height="13"/>
+                <rect x="5" y="70" width="25" height="25" fill="none" stroke="#18181b" stroke-width="4"/>
+                <rect x="11" y="76" width="13" height="13"/>
+                <!-- Data blocks -->
+                <rect x="38" y="10" width="8" height="8"/>
+                <rect x="52" y="15" width="8" height="8"/>
+                <rect x="38" y="38" width="24" height="24"/>
+                <rect x="70" y="45" width="10" height="10"/>
+                <rect x="45" y="70" width="15" height="8"/>
+                <rect x="75" y="75" width="15" height="15"/>
+              </svg>
+            </div>
+            <p class="text-[11px] text-neutral-500 mt-2">UPI VPA: <strong class="text-neutral-800">velmora@icici</strong></p>
+          </div>
+        </div>
+
+        <!-- Subform: Net Banking -->
+        <div id="paymentSubform-netbanking" class="payment-subform hidden p-4 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-2">
+          <span class="text-xs font-bold text-neutral-700 block mb-2">Select Primary Bank</span>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-white border border-neutral-200 cursor-pointer">
+              <input type="radio" name="nbBank" checked class="text-neutral-900">
+              <span class="font-semibold">HDFC Bank</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-white border border-neutral-200 cursor-pointer">
+              <input type="radio" name="nbBank" class="text-neutral-900">
+              <span class="font-semibold">ICICI Bank</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-white border border-neutral-200 cursor-pointer">
+              <input type="radio" name="nbBank" class="text-neutral-900">
+              <span class="font-semibold">State Bank of India</span>
+            </label>
+            <label class="flex items-center gap-2 p-2 rounded-lg bg-white border border-neutral-200 cursor-pointer">
+              <input type="radio" name="nbBank" class="text-neutral-900">
+              <span class="font-semibold">Axis Bank</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Subform: Cash on Delivery -->
+        <div id="paymentSubform-cod" class="payment-subform hidden p-4 rounded-2xl bg-neutral-50 border border-neutral-200 text-center">
+          <p class="text-xs font-bold text-neutral-800">Cash on Delivery (COD) Available</p>
+          <p class="text-[11px] text-neutral-500 mt-1">Pay with cash or UPI scan upon package delivery at your doorstep.</p>
+        </div>
+
+        <!-- Order Items Breakdown -->
+        <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200/80">
+          <span class="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block mb-2">Order Items</span>
+          <div id="checkoutOrderItemsList" class="max-h-28 overflow-y-auto pr-1"></div>
+          <div class="pt-2 mt-2 border-t border-neutral-200 flex items-center justify-between text-xs">
+            <span class="text-neutral-500">Payable Total:</span>
+            <span id="checkoutTotalDisplay" class="font-extrabold text-neutral-900 text-sm">₹0</span>
+          </div>
+        </div>
+
+        <button id="payNowButton" type="button" class="w-full py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-xl transition flex items-center justify-center gap-2">
+          <span>Authorize Payment & Confirm Order</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        </button>
+      </div>
+
+      <!-- STEP 3: ORDER CONFIRMATION & RECEIPT -->
+      <div id="checkoutStep3" class="checkout-step-content hidden text-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+
+        <div>
+          <span class="text-xs font-extrabold text-emerald-600 uppercase tracking-wider">Payment Approved • Confirmed</span>
+          <h3 class="text-2xl font-extrabold text-neutral-900 mt-1">Thank You for Your Order!</h3>
+          <p class="text-xs text-neutral-500">Order reference: <strong id="confirmedOrderId" class="text-neutral-900 font-mono">VEL-892144</strong></p>
+        </div>
+
+        <!-- Receipt Card -->
+        <div class="text-left p-4 rounded-2xl bg-neutral-50 border border-neutral-200 text-xs space-y-2">
+          <div class="flex justify-between border-b border-neutral-200 pb-2">
+            <span class="text-neutral-500">Date & Time:</span>
+            <span id="confirmedOrderDate" class="font-semibold text-neutral-900"></span>
+          </div>
+          <div class="flex justify-between border-b border-neutral-200 pb-2">
+            <span class="text-neutral-500">Payment Gateway:</span>
+            <span id="confirmedPaymentMethod" class="font-semibold text-emerald-700 font-mono"></span>
+          </div>
+          <div class="border-b border-neutral-200 pb-2">
+            <span class="text-neutral-500 block">Delivering To:</span>
+            <p id="confirmedShipName" class="font-bold text-neutral-900"></p>
+            <p id="confirmedShipAddress" class="text-neutral-600 text-[11px]"></p>
+          </div>
+          <div>
+            <span class="text-neutral-500 block mb-1">Purchased Products:</span>
+            <div id="confirmedItemsBreakdown"></div>
+          </div>
+          <div class="pt-2 flex justify-between font-extrabold text-sm text-neutral-900 border-t border-neutral-200">
+            <span>Total Paid:</span>
+            <span id="confirmedOrderTotal"></span>
+          </div>
+        </div>
+
+        <div class="flex gap-3 pt-2">
+          <button id="printReceiptBtn" type="button" class="flex-1 py-3 rounded-xl border border-neutral-300 font-bold text-xs hover:bg-neutral-50 transition">
+            Print Order Receipt
+          </button>
+          <button id="continueShoppingBtn" type="button" class="flex-1 py-3 rounded-xl bg-neutral-900 text-white font-bold text-xs hover:bg-neutral-800 transition">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. REALISTIC PAYMENT APPROVAL SIMULATION OVERLAY -->
+  <div id="paymentApprovalModal" class="hidden fixed inset-0 z-50 bg-black/75 flex items-center justify-center p-4 backdrop-blur-md">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl border border-neutral-200">
+      
+      <!-- Spinner State -->
+      <div id="approvalSpinner" class="w-16 h-16 mx-auto mb-4 border-4 border-neutral-200 border-t-emerald-600 rounded-full animate-spin-fast"></div>
+
+      <!-- Success Checkmark State -->
+      <div id="approvalSuccessIcon" class="hidden w-16 h-16 mx-auto mb-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center transform animate-pulse-glow">
+        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+      </div>
+
+      <h4 id="approvalStatusTitle" class="text-base font-extrabold text-neutral-900">Connecting to Bank Gateway...</h4>
+      <p id="approvalStatusSubtitle" class="text-xs text-neutral-500 mt-1 leading-relaxed">Securing 256-bit encrypted approval...</p>
+      
+      <div class="mt-5 pt-3 border-t border-neutral-100 flex items-center justify-center gap-2 text-[10px] text-neutral-400 font-semibold uppercase tracking-wider">
+        <span>Verified by Visa</span>
+        <span>•</span>
+        <span>Mastercard Identity</span>
+        <span>•</span>
+        <span>NPCI UPI</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. APPLICATION TOAST CONTAINER -->
+  <div id="appToast" class="fixed bottom-6 right-6 z-50 bg-neutral-900 text-white px-5 py-3 rounded-2xl shadow-2xl transition-all duration-300 transform translate-y-12 opacity-0 flex items-center gap-3 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/customizer.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
